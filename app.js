@@ -11,4 +11,3 @@ calc.minus(10,2);
 calc.multiplied(10,2);
 calc.divided(10,2);
 calc.powerOf(10,2);
-    
