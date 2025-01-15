@@ -17,9 +17,3 @@ console.log(age, parseInt(age));
 
 // # NaN 데이터 존재여부 확인
 console.log(isNaN(age));
-
-// ----------------------------------------------------
-
-if(isNaN(age)) {
-    console.log
-}
