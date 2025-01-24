@@ -2,19 +2,28 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
-console.log(toDoForm, toDoList);
+// console.log(toDoForm, toDoList);
+
+function deleteToDo(event) {
+  console.log(event.target);
+}
 
 function paintToDo(newTodo) {
-  console.log(newTodo);
+  //   console.log(newTodo);
 
   const li = document.createElement("li");
   const span = document.createElement("span");
+  const button = document.createElement("button");
+
   li.appendChild(span);
   span.innerText = newTodo;
+  li.appendChild(button);
+  button.innerText = "❌";
+
   toDoList.appendChild(li);
 
-  console.log(li);
-  //   li.innerText = newTodo;
+  button.addEventListener("click", deleteToDo);
+  //   console.log(li);
 }
 
 function handleToDoSubmit(event) {
@@ -28,4 +37,4 @@ function handleToDoSubmit(event) {
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-console.dir(toDoInput);
+// console.dir(toDoInput);
